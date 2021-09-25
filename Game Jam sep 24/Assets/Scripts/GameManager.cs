@@ -6,14 +6,14 @@ public class GameManager : MonoBehaviour
 {
     private void Start()
     {
-        LockCursor();
+        lockCursor();
     }
-    void LockCursor()
+    public void lockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-    void UnLockCursor()
+    public void unlockCursor()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
