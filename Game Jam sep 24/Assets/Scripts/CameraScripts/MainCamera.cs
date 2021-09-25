@@ -14,8 +14,20 @@ public class MainCamera : MonoBehaviour
 
     private float rotationOnX;
 
+    RaycastHit HitInfo;
+
+    Ray ray;
+
+    [SerializeField, Tooltip("The Q Text in the scene")] GameObject QText;
+
+    [HideInInspector] public bool Talking;
+    [HideInInspector] public float timer;
+
+    Pause pause;
     private void Start()
     {
+        pause = FindObjectOfType<Pause>();
+
         if (target == null)
         {
             target = FindObjectOfType<PlayerMovement>().gameObject.transform;
@@ -28,15 +40,44 @@ public class MainCamera : MonoBehaviour
 
     void Update()
     {
-        transform.position = Pivot.position +  new Vector3(0, yOffset, 0);
+        if (!Talking && timer <= 0)
+        {
+            ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+            if (Physics.Raycast(ray, out HitInfo))
+            {
+                //this is here to let you know that there's a clue to pick up
+                if(HitInfo.collider.gameObject.tag == "PickUpables")
+                    QText.SetActive(true);
+                else
+                    QText.SetActive(false);
 
-        float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * MouseSensitivity;
-        float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * MouseSensitivity;
+                if (HitInfo.collider.gameObject.tag == "PickUpables" && Input.GetButtonDown("Interact"))
+                {
+                    HitInfo.collider.gameObject.GetComponent<PickUpables>().TriggerDialogue();
+                    Talking = true;
+                }
+            }
+        }
+        else
+        {
+            //this DeActivates the text when interacting with clue
+            QText.SetActive(false);
+        }
 
-        rotationOnX -= mouseY;
-        rotationOnX = Mathf.Clamp(rotationOnX, -90, 90);
-        transform.localEulerAngles = new Vector3(rotationOnX, 0, 0);
+        if (!pause.isPaused)
+        {
+            transform.position = Pivot.position + new Vector3(0, yOffset, 0);
 
-        target.Rotate(Vector3.up * mouseX);
+            float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * MouseSensitivity;
+            float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * MouseSensitivity;
+
+            rotationOnX -= mouseY;
+            rotationOnX = Mathf.Clamp(rotationOnX, -90, 90);
+            transform.localEulerAngles = new Vector3(rotationOnX, 0, 0);
+
+            target.Rotate(Vector3.up * mouseX);
+        }
+        if (timer > -.1f)
+            timer -= Time.deltaTime;
     }
 }

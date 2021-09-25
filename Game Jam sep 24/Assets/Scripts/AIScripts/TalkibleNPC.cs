@@ -6,6 +6,11 @@ public class TalkibleNPC : MonoBehaviour
 {
     public Dialogue dialogue;
 
+
+    public Dialogue Question1;
+    public Dialogue Question2;
+    public Dialogue Question3;
+
     GameObject player;
 
     [SerializeField, Tooltip("Set this if Ways == GetClose")]
@@ -18,19 +23,13 @@ public class TalkibleNPC : MonoBehaviour
     float Timer;
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         manager = FindObjectOfType<DialogueManager>();
     }
 
     private void Update()
     {
 
-        if (player == null)
-        {
-            //this needs to be here because the player can switch characters
-            player = GameObject.FindGameObjectWithTag("Player");
-        }
-        else
-        {
             if (Vector3.Distance(transform.position, player.transform.position) < Talkdistance)
             {
                 if (Input.GetButtonDown("Interact") && !talking)
@@ -54,7 +53,6 @@ public class TalkibleNPC : MonoBehaviour
             {
                 talking = false;
             }
-        }
         Timer -= Time.deltaTime;
 
 

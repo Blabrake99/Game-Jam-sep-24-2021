@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameManager
+  - PickUpables
+  - Pause_Menu
   layers:
   - Default
   - TransparentFX
