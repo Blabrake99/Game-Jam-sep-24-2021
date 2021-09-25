@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int InventorySpacesUsed = 0;
 
     [SerializeField] GameObject ButtonPage;
+
+
     private void Start()
     {
         lockCursor();
@@ -91,4 +93,9 @@ public class GameManager : MonoBehaviour
         ButtonPage.SetActive(false);
         lockCursor();
     }
+    public void DisableButton(int index)
+    {
+        DialogueButtons[index].GetComponent<Button>().interactable = false;
+    }
+
 }

@@ -69,6 +69,8 @@ public class DialogueManager : MonoBehaviour
             NPC.GetComponent<TalkibleNPC>().DoneTalking();
         if (NPC.GetComponent<PickUpables>())
             NPC.GetComponent<PickUpables>().DoneTalking();
+        if (NPC.GetComponent<PoliceNPC>())
+            NPC.GetComponent<PoliceNPC>().DoneTalking();
         NPC = null;    
     }
 }
