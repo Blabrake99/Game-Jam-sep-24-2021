@@ -45,6 +45,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e47f94ae0e3165145bc99a7881f758e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InventorySlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  hasWatch: 0
+  InventorySpacesUsed: 0
+  NPC1: 000000000000000000000000
+  NPC2: 000000000000000000000000
+  NPC3: 000000000000000000000000
+  NPC4: 000000000000000000000000
+  NPC5: 000000000000000000000000
+  NPC6: 000000000000000000000000
+  NPC7: 000000000000000000000000
+  NPC8: 000000000000000000000000
+  NPC9: 000000000000000000000000
 --- !u!114 &-3151691226526463439
 MonoBehaviour:
   m_ObjectHideFlags: 0

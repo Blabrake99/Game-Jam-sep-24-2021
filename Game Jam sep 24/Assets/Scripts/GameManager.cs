@@ -8,7 +8,10 @@ public class GameManager : MonoBehaviour
     [SerializeField, Tooltip("The slots for the inventory")]
     GameObject[] InventorySlots = new GameObject[12];
 
-    [HideInInspector] public bool hasWatch;
+    [HideInInspector] public bool hasWatch, hasNametag, hasShoePrint, hasHat, hasFlashLight, hasLunchBox,
+        hasMoustache, hasGlassCut;
+
+    [SerializeField] GameObject[] DialogueButtons = new GameObject[8];
 
     [HideInInspector] public int InventorySpacesUsed = 0;
 
@@ -16,6 +19,45 @@ public class GameManager : MonoBehaviour
     {
         lockCursor();
     }
+
+    //gonna change later
+
+    //private void Update()
+    //{
+    //    if(hasWatch)
+    //    { 
+        
+    //    }
+    //    if(hasNametag)
+    //    { 
+        
+    //    }
+    //    if(hasShoePrint)
+    //    { 
+        
+    //    }
+    //    if(hasHat)
+    //    {
+        
+    //    }
+    //    if(hasFlashLight)
+    //    { 
+        
+    //    }
+    //    if(hasLunchBox)
+    //    {
+        
+    //    }
+    //    if(hasMoustache)
+    //    {
+        
+    //    }
+    //    if (hasGlassCut)
+    //    {
+
+    //    }
+
+    //}
     public void lockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
