@@ -114,6 +114,7 @@ public class TalkibleNPC : MonoBehaviour
     void setButtons()
     {
         //this ready's up all the buttons to start dialogue 
+        StartingButton.SetActive(true);
         StartingButton.GetComponent<Button>().onClick.AddListener(BasicDialogue);
 
         WatchBtn.GetComponent<Button>().onClick.AddListener(Watch);
