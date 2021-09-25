@@ -44,7 +44,7 @@ public class TalkibleNPC : MonoBehaviour
                     EndDialogue();
                 }
                 //return means enter
-                if (talking && Input.GetButtonDown("Enter") && Timer < 0)
+                if (talking && Input.GetButtonDown("Interact") && Timer < 0)
                 {
                     manager.DisplayNextSentence();
                     Timer = .5f;
