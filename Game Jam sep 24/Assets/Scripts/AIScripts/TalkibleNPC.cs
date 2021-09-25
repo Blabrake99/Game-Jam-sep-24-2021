@@ -28,8 +28,7 @@ public class TalkibleNPC : MonoBehaviour
 
     [SerializeField] GameObject ButtonPage;
 
-    [SerializeField] GameObject StartingButton, button1, button2, button3, button4, button5, button6, button7, button8;
-    [SerializeField] string StartingButtonName, button1Name, button2Name, button3Name, button4Name, button5Name, button6Name, button7Name, button8Name;
+    [SerializeField] GameObject StartingButton, WatchBtn, NameTagBtn, ShoePrintBtn, HatBtn, FlashLightBtn, LunchBoxBtn, MoustacheBtn, GlassCutBtn;
 
     GameManager Gm;
 
@@ -38,6 +37,7 @@ public class TalkibleNPC : MonoBehaviour
     
     private void Start()
     {
+        ButtonPage.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
         manager = FindObjectOfType<DialogueManager>();
         Gm = FindObjectOfType<GameManager>();
@@ -48,11 +48,17 @@ public class TalkibleNPC : MonoBehaviour
 
         if (Vector3.Distance(transform.position, player.transform.position) < Talkdistance)
         {
-            if (Input.GetButtonDown("Interact") && !talking)
+            if (Input.GetButtonDown("Interact") && !talking && Timer <= 0)
             {
                 Gm.unlockCursor();
                 setButtons();
                 ButtonPage.SetActive(true);
+                Timer = .5f;
+            }
+            if (Input.GetButtonDown("Interact") && ButtonPage.activeSelf && Timer <= 0)
+            {
+                Gm.lockCursor();
+                ButtonPage.SetActive(false);
                 Timer = .5f;
             }
             //this is a way for the player to skip dialogue if he's talking to the npc
@@ -108,67 +114,58 @@ public class TalkibleNPC : MonoBehaviour
     void setButtons()
     {
         //this ready's up all the buttons to start dialogue 
-        StartingButton.transform.GetChild(0).GetComponent<Text>().text = StartingButtonName;
         StartingButton.GetComponent<Button>().onClick.AddListener(BasicDialogue);
 
-        button1.transform.GetChild(0).GetComponent<Text>().text = button1Name;
-        button1.GetComponent<Button>().onClick.AddListener(Button1);
+        WatchBtn.GetComponent<Button>().onClick.AddListener(Watch);
 
-        button2.transform.GetChild(0).GetComponent<Text>().text = button2Name;
-        button2.GetComponent<Button>().onClick.AddListener(Button2);
+        NameTagBtn.GetComponent<Button>().onClick.AddListener(NameTag);
 
-        button3.transform.GetChild(0).GetComponent<Text>().text = button3Name;
-        button3.GetComponent<Button>().onClick.AddListener(Button3);
+        ShoePrintBtn.GetComponent<Button>().onClick.AddListener(ShoePrint);
 
-        button4.transform.GetChild(0).GetComponent<Text>().text = button4Name;
-        button4.GetComponent<Button>().onClick.AddListener(Button4);
+        HatBtn.GetComponent<Button>().onClick.AddListener(Hat);
 
-        button5.transform.GetChild(0).GetComponent<Text>().text = button5Name;
-        button5.GetComponent<Button>().onClick.AddListener(Button5);
+        FlashLightBtn.GetComponent<Button>().onClick.AddListener(FlashLight);
 
-        button6.transform.GetChild(0).GetComponent<Text>().text = button6Name;
-        button6.GetComponent<Button>().onClick.AddListener(Button6);
+        LunchBoxBtn.GetComponent<Button>().onClick.AddListener(LunchBox);
 
-        button7.transform.GetChild(0).GetComponent<Text>().text = button7Name;
-        button7.GetComponent<Button>().onClick.AddListener(Button7);
+        MoustacheBtn.GetComponent<Button>().onClick.AddListener(Moustache);
 
-        button8.transform.GetChild(0).GetComponent<Text>().text = button8Name;
-        button8.GetComponent<Button>().onClick.AddListener(Button8);
+        GlassCutBtn.GetComponent<Button>().onClick.AddListener(GlassCut);
 
     }
     public void BasicDialogue()
     {
         TriggerDialogue(dialogue);
     }
-    public void Button1()
+    public void Watch()
     {
         TriggerDialogue(WatchDialogue);
     }
-    public void Button2()
+    public void NameTag()
     {
         TriggerDialogue(NameTagDialogue);
     }
-    public void Button3()
+    public void ShoePrint()
     {
         TriggerDialogue(ShoePrintDialogue);
     }
-    public void Button4()
+    public void Hat()
     {
         TriggerDialogue(HatDialogue);
     }
-    public void Button5()
+    public void FlashLight()
     {
         TriggerDialogue(FlashLightDialogue);
     }
-    public void Button6()
+    public void LunchBox()
     {
         TriggerDialogue(LunchBoxDialogue);
     }
-    public void Button7()
+    public void Moustache()
     {
         TriggerDialogue(MoustacheDialogue);
     }
-    public void Button8()
+    public void GlassCut()
     {
         TriggerDialogue(GlassCutDialogue);
     }

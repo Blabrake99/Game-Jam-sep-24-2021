@@ -8,9 +8,6 @@ public class PickUpables : MonoBehaviour
 
     GameObject player;
 
-    [SerializeField, Tooltip("Set this if Ways == GetClose")]
-    float Talkdistance;
-
     bool talking = false;
 
     DialogueManager manager;
@@ -23,8 +20,11 @@ public class PickUpables : MonoBehaviour
     [SerializeField, Tooltip("The Image for this object in the inventory")]
     Sprite ItemSprite;
 
+    GameManager Gm;
+    [SerializeField] ItemsToGive itemGiven;
     private void Start()
     {
+        Gm = FindObjectOfType<GameManager>();
         manager = FindObjectOfType<DialogueManager>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -53,7 +53,8 @@ public class PickUpables : MonoBehaviour
         player.GetComponent<PlayerMovement>().CantMove = false;
         FindObjectOfType<MainCamera>().timer = 1f;
         FindObjectOfType<MainCamera>().Talking = false;
-        FindObjectOfType<GameManager>().UpdateInventory(Description, ItemSprite);
+        Gm.UpdateInventory(Description, ItemSprite);
+        GivePlayerItem();
         Destroy(gameObject);
     }
     /// <summary>
@@ -61,6 +62,7 @@ public class PickUpables : MonoBehaviour
     /// </summary>
     public void TriggerDialogue()
     {
+        Timer = .5f;
         talking = true;
         manager.StartDialogue(dialogue);
         manager.NPC = this.gameObject;
@@ -72,4 +74,52 @@ public class PickUpables : MonoBehaviour
         manager.EndDialogue();
         player.GetComponent<PlayerMovement>().CantMove = false;
     }
+    #region Don't look at code
+    void GivePlayerItem()
+    {
+        if(itemGiven == ItemsToGive.Watch)
+        {
+            Gm.hasWatch = true;
+        }
+        if(itemGiven == ItemsToGive.NameTag)
+        {
+            Gm.hasNametag = true;
+        }
+        if(itemGiven == ItemsToGive.ShoePrint)
+        {
+            Gm.hasShoePrint = true;
+        }
+        if(itemGiven == ItemsToGive.Hat)
+        {
+            Gm.hasHat = true;
+        }
+        if(itemGiven == ItemsToGive.FlashLight)
+        {
+            Gm.hasFlashLight = true;
+        }
+        if(itemGiven == ItemsToGive.LunchBox)
+        {
+            Gm.hasLunchBox = true;
+        }
+        if(itemGiven == ItemsToGive.Moustache)
+        {
+            Gm.hasMoustache = true;
+        }
+        if(itemGiven == ItemsToGive.GlassCut)
+        {
+            Gm.hasGlassCut = true;
+        }
+    }
+    enum ItemsToGive
+    {
+        Watch,
+        NameTag,
+        ShoePrint,
+        Hat,
+        FlashLight,
+        LunchBox,
+        Moustache,
+        GlassCut
+    }
+    #endregion
 }

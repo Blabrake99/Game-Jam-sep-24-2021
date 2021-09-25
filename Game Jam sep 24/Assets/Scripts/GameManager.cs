@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public int InventorySpacesUsed = 0;
 
+    [SerializeField] GameObject ButtonPage;
     private void Start()
     {
         lockCursor();
@@ -22,42 +23,50 @@ public class GameManager : MonoBehaviour
 
     //gonna change later
 
-    //private void Update()
-    //{
-    //    if(hasWatch)
-    //    { 
-        
-    //    }
-    //    if(hasNametag)
-    //    { 
-        
-    //    }
-    //    if(hasShoePrint)
-    //    { 
-        
-    //    }
-    //    if(hasHat)
-    //    {
-        
-    //    }
-    //    if(hasFlashLight)
-    //    { 
-        
-    //    }
-    //    if(hasLunchBox)
-    //    {
-        
-    //    }
-    //    if(hasMoustache)
-    //    {
-        
-    //    }
-    //    if (hasGlassCut)
-    //    {
+    private void Update()
+    {
+        if (hasWatch)
+        {
+            if(!DialogueButtons[0].activeSelf)
+                DialogueButtons[0].SetActive(true);
+        }
+        if (hasNametag)
+        {
+            if (!DialogueButtons[1].activeSelf)
+                DialogueButtons[1].SetActive(true);
+        }
+        if (hasShoePrint)
+        {
+            if (!DialogueButtons[2].activeSelf)
+                DialogueButtons[2].SetActive(true);
+        }
+        if (hasHat)
+        {
+            if (!DialogueButtons[3].activeSelf)
+                DialogueButtons[3].SetActive(true);
+        }
+        if (hasFlashLight)
+        {
+            if (!DialogueButtons[4].activeSelf)
+                DialogueButtons[4].SetActive(true);
+        }
+        if (hasLunchBox)
+        {
+            if (!DialogueButtons[5].activeSelf)
+                DialogueButtons[5].SetActive(true);
+        }
+        if (hasMoustache)
+        {
+            if (!DialogueButtons[6].activeSelf)
+                DialogueButtons[6].SetActive(true);
+        }
+        if (hasGlassCut)
+        {
+            if (!DialogueButtons[7].activeSelf)
+                DialogueButtons[7].SetActive(true);
+        }
 
-    //    }
-
-    //}
+    }
     public void lockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -76,5 +85,10 @@ public class GameManager : MonoBehaviour
             InventorySlots[InventorySpacesUsed].GetComponent<Image>().sprite = image;
             InventorySpacesUsed += 1;
         }
+    }
+    public void CloseDialogueBox()
+    {
+        ButtonPage.SetActive(false);
+        lockCursor();
     }
 }
