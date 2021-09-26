@@ -34,9 +34,10 @@ public class TalkibleNPC : MonoBehaviour
 
     [HideInInspector] public bool Question1Unlocked, 
         Question2Unlocked, Question3Unlocked;
-    
+    Animator anim;
     private void Start()
     {
+        anim = GetComponent<Animator>();
         ButtonPage.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
         manager = FindObjectOfType<DialogueManager>();
@@ -88,6 +89,7 @@ public class TalkibleNPC : MonoBehaviour
     }
     public void DoneTalking()
     {
+        anim.SetBool("IsTalking", false);
         player.GetComponent<PlayerMovement>().CantMove = false;
         Gm.lockCursor();
         ButtonPage.SetActive(false);
@@ -98,6 +100,7 @@ public class TalkibleNPC : MonoBehaviour
     /// </summary>
     public void TriggerDialogue(Dialogue log)
     {
+        anim.SetBool("IsTalking", true);
         ButtonPage.SetActive(false);
         talking = true;
         manager.StartDialogue(log);
