@@ -60,28 +60,32 @@ public class PoliceNPC : MonoBehaviour
 
         if (Vector3.Distance(transform.position, player.transform.position) < Talkdistance)
         {
-            if(!TalkedToOnce && Input.GetButtonDown("Interact") && !talking && Timer <= 0)
+            if(!TalkedToOnce && Input.GetButtonDown("Interact") && !talking && Timer <= 0 ||
+                Input.GetButtonDown("Interact") && !talking && Timer <= 0 && Gm.InventorySpacesUsed >= 3)
             {
                 TriggerDialogue(dialogue);
                 Timer = .5f;
                 TalkedToOnce = true;
             }
-            if (Input.GetButtonDown("Interact") && !talking && Timer <= 0 && TalkedToOnce)
+            if (Gm.InventorySpacesUsed >= 3)
             {
-                Gm.unlockCursor();
-                setButtons();
-                ButtonPage.SetActive(false);
-                GuessPage.SetActive(true);
-                talking = false;
-                Timer = .5f;
-            }
-            if (Input.GetButtonDown("Interact") && ButtonPage.activeSelf && Timer <= 0)
-            {
-                Gm.lockCursor();
-                ButtonPage.SetActive(false);
-                GuessPage.SetActive(false);
-                talking = false;
-                Timer = .5f;
+                if (Input.GetButtonDown("Interact") && !talking && Timer <= 0 && TalkedToOnce)
+                {
+                    Gm.unlockCursor();
+                    setButtons();
+                    ButtonPage.SetActive(false);
+                    GuessPage.SetActive(true);
+                    talking = false;
+                    Timer = .5f;
+                }
+                if (Input.GetButtonDown("Interact") && ButtonPage.activeSelf && Timer <= 0)
+                {
+                    Gm.lockCursor();
+                    ButtonPage.SetActive(false);
+                    GuessPage.SetActive(false);
+                    talking = false;
+                    Timer = .5f;
+                }
             }
             //this is a way for the player to skip dialogue if he's talking to the npc
             if (Input.GetButtonDown("Pause") && talking)

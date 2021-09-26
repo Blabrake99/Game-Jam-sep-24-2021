@@ -43,6 +43,8 @@ public class TalkibleNPC : MonoBehaviour
     Animator anim;
     MainCamera camera;
     [SerializeField] bool hasCut;
+
+    bool TalkedToOnce;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -58,7 +60,13 @@ public class TalkibleNPC : MonoBehaviour
 
         if (Vector3.Distance(transform.position, player.transform.position) < Talkdistance)
         {
-            if (Input.GetButtonDown("Interact") && !talking && Timer <= 0)
+            if (!TalkedToOnce && Input.GetButtonDown("Interact") && !talking && Timer <= 0)
+            {
+                TriggerDialogue(dialogue);
+                Timer = .5f;
+                TalkedToOnce = true;
+            }
+            if (Input.GetButtonDown("Interact") && !talking && !InMenu && Timer <= 0 && TalkedToOnce)
             {
                 camera.CanMoveCamera = false;
                 InMenu = true;
@@ -71,7 +79,7 @@ public class TalkibleNPC : MonoBehaviour
 
                 Timer = .5f;
             }
-            if (Input.GetButtonDown("Interact") && ButtonPage.activeSelf && Timer <= 0)
+            if (Input.GetButtonDown("Interact") && InMenu && !talking && Timer <= 0)
             {
                 InMenu = false;
                 Gm.lockCursor();
