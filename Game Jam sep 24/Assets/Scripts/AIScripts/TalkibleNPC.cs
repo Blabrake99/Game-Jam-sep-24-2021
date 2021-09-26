@@ -20,7 +20,7 @@ public class TalkibleNPC : MonoBehaviour
     [SerializeField, Tooltip("Set this if Ways == GetClose")]
     float Talkdistance;
 
-   public bool talking = false;
+    public bool talking = false;
 
     DialogueManager manager;
 
@@ -32,7 +32,11 @@ public class TalkibleNPC : MonoBehaviour
 
     GameManager Gm;
 
-    [HideInInspector] public bool Question1Unlocked, 
+    [SerializeField] TalkingTypes[] talkingTypes = new TalkingTypes[9];
+
+    TalkingTypes CurrentType;
+    [HideInInspector]
+    public bool Question1Unlocked,
         Question2Unlocked, Question3Unlocked;
     Animator anim;
     private void Start()
@@ -89,7 +93,7 @@ public class TalkibleNPC : MonoBehaviour
     }
     public void DoneTalking()
     {
-        anim.SetBool("IsTalking", false);
+        StopAnimation();
         player.GetComponent<PlayerMovement>().CantMove = false;
         Gm.lockCursor();
         ButtonPage.SetActive(false);
@@ -100,7 +104,8 @@ public class TalkibleNPC : MonoBehaviour
     /// </summary>
     public void TriggerDialogue(Dialogue log)
     {
-        anim.SetBool("IsTalking", true);
+        ResetButtons();
+        FindAnimation();
         ButtonPage.SetActive(false);
         talking = true;
         manager.StartDialogue(log);
@@ -161,40 +166,99 @@ public class TalkibleNPC : MonoBehaviour
         GlassCutBtn.GetComponent<Button>().onClick.RemoveListener(GlassCut);
 
     }
+    void FindAnimation()
+    {
+        if (CurrentType == TalkingTypes.Normal)
+        {
+            anim.SetBool("IsTalking", true);
+        }
+        if (CurrentType == TalkingTypes.Suprised)
+        {
+            anim.SetBool("IsSuprised", true);
+        }
+        if (CurrentType == TalkingTypes.HesOnToMe)
+        {
+            anim.SetBool("IsOnToMe", true);
+        }
+        if (CurrentType == TalkingTypes.Angry)
+        {
+            anim.SetBool("IsAngry", true);
+        }
+    }
+    void StopAnimation()
+    {
+
+        anim.SetBool("IsTalking", false);
+
+        anim.SetBool("IsSuprised", false);
+
+        anim.SetBool("IsOnToMe", false);
+
+        anim.SetBool("IsAngry", false);
+
+    }
+    enum TalkingTypes
+    {
+        Normal,
+        Angry,
+        HesOnToMe,
+        Suprised
+    }
     public void BasicDialogue()
     {
+        CurrentType = talkingTypes[0];
         TriggerDialogue(dialogue);
     }
     public void Watch()
     {
+        CurrentType = talkingTypes[1];
         TriggerDialogue(WatchDialogue);
     }
     public void NameTag()
     {
+        CurrentType = talkingTypes[2];
         TriggerDialogue(NameTagDialogue);
     }
     public void ShoePrint()
     {
+        CurrentType = talkingTypes[3];
         TriggerDialogue(ShoePrintDialogue);
     }
     public void Hat()
     {
+        CurrentType = talkingTypes[4];
         TriggerDialogue(HatDialogue);
     }
     public void FlashLight()
     {
+        CurrentType = talkingTypes[5];
         TriggerDialogue(FlashLightDialogue);
     }
     public void LunchBox()
     {
+        CurrentType = talkingTypes[6];
         TriggerDialogue(LunchBoxDialogue);
     }
     public void Moustache()
     {
+        CurrentType = talkingTypes[7];
         TriggerDialogue(MoustacheDialogue);
     }
     public void GlassCut()
     {
+        CurrentType = talkingTypes[8];
         TriggerDialogue(GlassCutDialogue);
+    }
+    void ResetButtons()
+    {
+        StartingButton.GetComponent<Button>().interactable = true;
+        WatchBtn.GetComponent<Button>().interactable = true;
+        NameTagBtn.GetComponent<Button>().interactable = true;
+        ShoePrintBtn.GetComponent<Button>().interactable = true;
+        HatBtn.GetComponent<Button>().interactable = true;
+        FlashLightBtn.GetComponent<Button>().interactable = true;
+        LunchBoxBtn.GetComponent<Button>().interactable = true;
+        MoustacheBtn.GetComponent<Button>().interactable = true;
+        GlassCutBtn.GetComponent<Button>().interactable = true;
     }
 }

@@ -6899,6 +6899,36 @@ PrefabInstance:
       propertyPath: StartingButton
       value: 
       objectReference: {fileID: 651826161}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: talkingTypes.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: talkingTypes.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: talkingTypes.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: talkingTypes.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: talkingTypes.Array.data[6]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: talkingTypes.Array.data[7]
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40a175e4fd174624aa09d21714e93d99, type: 3}
 --- !u!114 &1433986014648178481
