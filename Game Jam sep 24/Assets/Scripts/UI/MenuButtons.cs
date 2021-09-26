@@ -7,7 +7,7 @@ public class MenuButtons : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("BrandonScene");
     }
 
     public void BackToMenu()
