@@ -20,7 +20,7 @@ public class TalkibleNPC : MonoBehaviour
     [SerializeField, Tooltip("Set this if Ways == GetClose")]
     float Talkdistance;
 
-    bool talking = false;
+   public bool talking = false;
 
     DialogueManager manager;
 
