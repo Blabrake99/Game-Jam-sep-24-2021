@@ -21,6 +21,13 @@ public class GameManager : MonoBehaviour
     public bool StartWinning;
 
     public bool StartLosing;
+
+    [SerializeField, Tooltip("The item description for this object in Inventory")]
+    string BloodDescription;
+
+    [SerializeField, Tooltip("The Image for this object in the inventory")]
+    Sprite BloodItemSprite;
+    bool hasBloodHintAlready;
     private void Start()
     {
         lockCursor();
@@ -81,6 +88,17 @@ public class GameManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+    public void UpdateBloodInventory()
+    {
+        if (InventorySpacesUsed < InventorySlots.Length && !hasBloodHintAlready)
+        {
+            InventorySlots[InventorySpacesUsed].GetComponent<InventorySlots>().ItemDescription = BloodDescription;
+            InventorySlots[InventorySpacesUsed].GetComponent<Image>().sprite = BloodItemSprite;
+            hasGlassCut = true;
+            hasBloodHintAlready = true;
+            InventorySpacesUsed += 1;
+        }
     }
     public void UpdateInventory(string InventoryParagraph, Sprite image)
     {

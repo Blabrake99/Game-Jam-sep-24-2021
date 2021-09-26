@@ -41,6 +41,8 @@ public class TalkibleNPC : MonoBehaviour
     public bool Question1Unlocked,
         Question2Unlocked, Question3Unlocked;
     Animator anim;
+
+    [SerializeField] bool hasCut;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -61,6 +63,10 @@ public class TalkibleNPC : MonoBehaviour
                 Gm.unlockCursor();
                 setButtons();
                 ButtonPage.SetActive(true);
+
+                if(hasCut)
+                    Gm.UpdateBloodInventory();
+
                 Timer = .5f;
             }
             if (Input.GetButtonDown("Interact") && ButtonPage.activeSelf && Timer <= 0)
