@@ -22,6 +22,8 @@ public class TalkibleNPC : MonoBehaviour
 
     public bool talking = false;
 
+    public bool InMenu = false;
+
     DialogueManager manager;
 
     float Timer;
@@ -55,6 +57,7 @@ public class TalkibleNPC : MonoBehaviour
         {
             if (Input.GetButtonDown("Interact") && !talking && Timer <= 0)
             {
+                InMenu = true;
                 Gm.unlockCursor();
                 setButtons();
                 ButtonPage.SetActive(true);
@@ -62,6 +65,7 @@ public class TalkibleNPC : MonoBehaviour
             }
             if (Input.GetButtonDown("Interact") && ButtonPage.activeSelf && Timer <= 0)
             {
+                InMenu = false;
                 Gm.lockCursor();
                 ButtonPage.SetActive(false);
                 Timer = .5f;
@@ -69,12 +73,14 @@ public class TalkibleNPC : MonoBehaviour
             //this is a way for the player to skip dialogue if he's talking to the npc
             if (Input.GetButtonDown("Pause") && talking)
             {
+                InMenu = false;
                 Gm.lockCursor();
                 ButtonPage.SetActive(false);
                 EndDialogue();
             }
-            if (Input.GetButtonDown("Pause"))
+            if (Input.GetButtonDown("Pause") && InMenu)
             {
+                InMenu = false;
                 Gm.lockCursor();
                 ButtonPage.SetActive(false);
             }
@@ -93,6 +99,7 @@ public class TalkibleNPC : MonoBehaviour
     }
     public void DoneTalking()
     {
+        InMenu = false;
         StopAnimation();
         player.GetComponent<PlayerMovement>().CantMove = false;
         Gm.lockCursor();

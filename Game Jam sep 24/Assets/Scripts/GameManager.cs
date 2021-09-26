@@ -93,6 +93,12 @@ public class GameManager : MonoBehaviour
     }
     public void CloseDialogueBox()
     {
+        TalkibleNPC[] temps = FindObjectsOfType<TalkibleNPC>();
+
+        foreach(TalkibleNPC t in temps)
+        {
+            t.InMenu = false;
+        }
         ButtonPage.SetActive(false);
         lockCursor();
     }
