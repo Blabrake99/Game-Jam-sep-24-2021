@@ -45,8 +45,10 @@ public class PoliceNPC : MonoBehaviour
     bool GoToLoseScene;
     bool GoToWinScene;
 
+    Animator anim;
     private void Start()
     {
+        anim = GetComponent<Animator>();
         ButtonPage.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
         manager = FindObjectOfType<DialogueManager>();
@@ -101,14 +103,17 @@ public class PoliceNPC : MonoBehaviour
             {
                 if(rightGuesses == 2)
                 {
+                    anim.SetBool("IsSuprised", true);
                     TriggerDialogue(TwoRightDialogue);
                 }
                 if(rightGuesses == 1 && wrongGuess == 1)
                 {
+                    anim.SetBool("IsTalking", true);
                     TriggerDialogue(OneRightDialogue);
                 }
                 if(wrongGuess == 2)
                 {
+                    anim.SetBool("IsAngry", true);
                     TriggerDialogue(NoneRightDialogue);
                 }
                 if (rightGuesses == 2 && ChoosedRight)
@@ -137,6 +142,7 @@ public class PoliceNPC : MonoBehaviour
     public void DoneTalking()
     {
         player.GetComponent<PlayerMovement>().CantMove = false;
+        StopAnimation();
         Gm.lockCursor();
         if (GoToWinScene)
             Gm.LoadWinScene();
@@ -162,7 +168,18 @@ public class PoliceNPC : MonoBehaviour
         manager.EndDialogue();
         player.GetComponent<PlayerMovement>().CantMove = false;
     }
+    void StopAnimation()
+    {
 
+        anim.SetBool("IsTalking", false);
+
+        anim.SetBool("IsSuprised", false);
+
+        anim.SetBool("IsOnToMe", false);
+
+        anim.SetBool("IsAngry", false);
+
+    }
     void setButtons()
     {
         ResetButtons();
@@ -227,6 +244,7 @@ public class PoliceNPC : MonoBehaviour
         ButtonPage.SetActive(true);
         GuessPage.SetActive(false);
     }
+
     void ResetButtons()
     {
         WatchBtn.GetComponent<Button>().interactable = true;
