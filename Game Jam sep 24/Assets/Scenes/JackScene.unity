@@ -851,7 +851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198413207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.82, y: 0.74, z: -6.7}
+  m_LocalPosition: {x: -5.25, y: 0.74, z: -4.19}
   m_LocalScale: {x: 0.2695447, y: 0.2695447, z: 0.2695447}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3329,7 +3329,7 @@ MonoBehaviour:
   - {fileID: 198413211}
   - {fileID: 1520628466}
   - {fileID: 672120251}
-  waitTime: 2
+  waitTime: 5
 --- !u!195 &1400662894
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -8,8 +8,8 @@ public class AiMovement : MonoBehaviour
 
     private NavMeshAgent agent;
     [SerializeField] List<Transform> waypoints;
-    [SerializeField] float waitTime = 2f;
-    int patrolIndex;
+    [SerializeField] float waitTime = 5f;
+    int waypointIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -18,29 +18,35 @@ public class AiMovement : MonoBehaviour
 
         if(waypoints != null &&  waypoints.Count >= 2)
         {
-            patrolIndex = 0;
+            waypointIndex = 0;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(agent.remainingDistance <= 1f)
+        waitTime -= Time.deltaTime;
+
+        if(waitTime < 0)
         {
-            waitTime -= Time.deltaTime;
+            waitTime = 0;
+        }
+
+        if (agent.remainingDistance <= 1f && waitTime <= 0)
+        {
+            waitTime = 5f;
             ChangeWaypoint();
             ChangeDestination();
         }
-       // agent.destination = waypoints.Count.position;
     }
 
     private void ChangeWaypoint()
     {
-        patrolIndex++;
+        waypointIndex++;
 
-        if(patrolIndex >= waypoints.Count)
+        if(waypointIndex >= waypoints.Count)
         {
-            patrolIndex = 0;
+            waypointIndex = 0;
         }
     }
 
@@ -48,9 +54,9 @@ public class AiMovement : MonoBehaviour
     {
         if(waypoints != null)
         {
-            Vector3 target = waypoints[patrolIndex].transform.position;
+            Vector3 target = waypoints[waypointIndex].transform.position;
             agent.SetDestination(target);
-            waitTime = 2f;
+           
         }
     }
 
