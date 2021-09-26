@@ -55,6 +55,7 @@ public class PickUpables : MonoBehaviour
         FindObjectOfType<MainCamera>().Talking = false;
         Gm.UpdateInventory(Description, ItemSprite);
         GivePlayerItem();
+        talking = false;
         Destroy(gameObject);
     }
     /// <summary>

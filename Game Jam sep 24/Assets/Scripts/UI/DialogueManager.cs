@@ -63,16 +63,22 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueText.text = "";
         nameText.text = "";
+
         GM.GetComponent<GameManager>().lockCursor();
         textPanal.SetActive(false);
+
         if(NPC.GetComponent<TalkibleNPC>())
             NPC.GetComponent<TalkibleNPC>().DoneTalking();
+
         if (NPC.GetComponent<PickUpables>())
             NPC.GetComponent<PickUpables>().DoneTalking();
+
         if (NPC.GetComponent<Interactables>())
             NPC.GetComponent<Interactables>().DoneTalking();
+
         if (NPC.GetComponent<PoliceNPC>())
             NPC.GetComponent<PoliceNPC>().DoneTalking();
+
         NPC = null;    
     }
 }

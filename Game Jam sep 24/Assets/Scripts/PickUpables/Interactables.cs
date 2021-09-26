@@ -26,7 +26,7 @@ public class Interactables : MonoBehaviour
     {
 
         //this is a way for the player to skip dialogue if he's talking to the npc
-        if (Input.GetButtonDown("Pause") && talking)
+        if (Input.GetButtonDown("Pause") && talking && Timer < 0)
         {
             EndDialogue();
         }
@@ -46,6 +46,7 @@ public class Interactables : MonoBehaviour
         player.GetComponent<PlayerMovement>().CantMove = false;
         FindObjectOfType<MainCamera>().timer = 1f;
         FindObjectOfType<MainCamera>().Talking = false;
+        talking = false;
     }
     /// <summary>
     /// Call this when you need to talk to the player 
