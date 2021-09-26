@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 5a55301b42b123341b4e0a9616dc7652
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/CreditsScene.unity
     guid: 0883ce0bb9a965f4bb30d3351f939a3b
   - enabled: 1
@@ -20,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoseScene.unity
     guid: e1ae4924380acc846b7087399faa3f23
+  - enabled: 1
+    path: Assets/Scenes/BrandonScene.unity
+    guid: ca55b3e295f471d4392891061d55b24a
   m_configObjects: {}
