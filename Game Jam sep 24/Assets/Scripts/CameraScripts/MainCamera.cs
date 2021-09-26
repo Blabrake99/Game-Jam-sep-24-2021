@@ -51,9 +51,20 @@ public class MainCamera : MonoBehaviour
                 else
                     QText.SetActive(false);
 
+                if (HitInfo.collider.gameObject.tag == "Interactable")
+                    QText.SetActive(true);
+                else
+                    QText.SetActive(false);
+
                 if (HitInfo.collider.gameObject.tag == "PickUpables" && Input.GetButtonDown("Interact"))
                 {
                     HitInfo.collider.gameObject.GetComponent<PickUpables>().TriggerDialogue();
+                    Talking = true;
+                }
+
+                if (HitInfo.collider.gameObject.tag == "Interactable" && Input.GetButtonDown("Interact"))
+                {
+                    HitInfo.collider.gameObject.GetComponent<Interactables>().TriggerDialogue();
                     Talking = true;
                 }
             }
