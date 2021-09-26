@@ -102,6 +102,7 @@ public class TalkibleNPC : MonoBehaviour
         talking = true;
         manager.StartDialogue(log);
         manager.NPC = this.gameObject;
+        UnsetButtons();
         player.GetComponent<PlayerMovement>().CantMove = true;
     }
     public void EndDialogue()
@@ -132,6 +133,29 @@ public class TalkibleNPC : MonoBehaviour
         MoustacheBtn.GetComponent<Button>().onClick.AddListener(Moustache);
 
         GlassCutBtn.GetComponent<Button>().onClick.AddListener(GlassCut);
+
+    }
+    void UnsetButtons()
+    {
+        //this ready's up all the buttons to start dialogue 
+        StartingButton.SetActive(true);
+        StartingButton.GetComponent<Button>().onClick.RemoveListener(BasicDialogue);
+
+        WatchBtn.GetComponent<Button>().onClick.RemoveListener(Watch);
+
+        NameTagBtn.GetComponent<Button>().onClick.RemoveListener(NameTag);
+
+        ShoePrintBtn.GetComponent<Button>().onClick.RemoveListener(ShoePrint);
+
+        HatBtn.GetComponent<Button>().onClick.RemoveListener(Hat);
+
+        FlashLightBtn.GetComponent<Button>().onClick.RemoveListener(FlashLight);
+
+        LunchBoxBtn.GetComponent<Button>().onClick.RemoveListener(LunchBox);
+
+        MoustacheBtn.GetComponent<Button>().onClick.RemoveListener(Moustache);
+
+        GlassCutBtn.GetComponent<Button>().onClick.RemoveListener(GlassCut);
 
     }
     public void BasicDialogue()

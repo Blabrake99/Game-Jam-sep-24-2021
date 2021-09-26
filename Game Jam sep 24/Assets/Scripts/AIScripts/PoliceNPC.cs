@@ -31,16 +31,19 @@ public class PoliceNPC : MonoBehaviour
     public bool Question1Unlocked,
         Question2Unlocked, Question3Unlocked;
 
-    int rightGuesses;
+    public int rightGuesses;
 
-    int wrongGuess;
+    public int wrongGuess;
 
-    int guesses;
+    public int guesses;
 
     bool ChoosedRight;
     bool ChoosedWrong;
 
     bool TalkedToOnce;
+
+    bool GoToLoseScene;
+    bool GoToWinScene;
 
     private void Start()
     {
@@ -67,6 +70,7 @@ public class PoliceNPC : MonoBehaviour
                 setButtons();
                 ButtonPage.SetActive(false);
                 GuessPage.SetActive(true);
+                talking = false;
                 Timer = .5f;
             }
             if (Input.GetButtonDown("Interact") && ButtonPage.activeSelf && Timer <= 0)
@@ -74,6 +78,7 @@ public class PoliceNPC : MonoBehaviour
                 Gm.lockCursor();
                 ButtonPage.SetActive(false);
                 GuessPage.SetActive(false);
+                talking = false;
                 Timer = .5f;
             }
             //this is a way for the player to skip dialogue if he's talking to the npc
@@ -82,12 +87,14 @@ public class PoliceNPC : MonoBehaviour
                 Gm.lockCursor();
                 ButtonPage.SetActive(false);
                 GuessPage.SetActive(false);
+                talking = false;
                 EndDialogue();
             }
             if (Input.GetButtonDown("Pause"))
             {
                 Gm.lockCursor();
                 ButtonPage.SetActive(false);
+                talking = false;
                 GuessPage.SetActive(false);
             }
             if(guesses == 2)
@@ -104,6 +111,10 @@ public class PoliceNPC : MonoBehaviour
                 {
                     TriggerDialogue(NoneRightDialogue);
                 }
+                if (rightGuesses == 2 && ChoosedRight)
+                    GoToWinScene = true;
+                if (rightGuesses == 2 && ChoosedWrong)
+                    GoToLoseScene = true;
                 ChoosedRight = false;
                 ChoosedWrong = false;
                 rightGuesses = 0;
@@ -127,7 +138,10 @@ public class PoliceNPC : MonoBehaviour
     {
         player.GetComponent<PlayerMovement>().CantMove = false;
         Gm.lockCursor();
-        //ButtonPage.SetActive(false);
+        if (GoToWinScene)
+            Gm.LoadWinScene();
+        if (GoToLoseScene)
+            Gm.LoadLoseScene();
         talking = false;
     }
     /// <summary>
@@ -136,6 +150,7 @@ public class PoliceNPC : MonoBehaviour
     public void TriggerDialogue(Dialogue log)
     {
         ButtonPage.SetActive(false);
+        UnsetButtons();
         talking = true;
         manager.StartDialogue(log);
         manager.NPC = this.gameObject;
@@ -153,7 +168,6 @@ public class PoliceNPC : MonoBehaviour
         ResetButtons();
         //this ready's up all the buttons to start dialogue 
         StartingButton.SetActive(false);
-        StartingButton.GetComponent<Button>().onClick.AddListener(BasicDialogue);
 
         WatchBtn.GetComponent<Button>().onClick.AddListener(RightButton);
 
@@ -172,15 +186,34 @@ public class PoliceNPC : MonoBehaviour
         GlassCutBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
 
     }
+    void UnsetButtons()
+    {
+
+        WatchBtn.GetComponent<Button>().onClick.RemoveListener(RightButton);
+
+        NameTagBtn.GetComponent<Button>().onClick.RemoveListener(WrongButton);
+
+        ShoePrintBtn.GetComponent<Button>().onClick.RemoveListener(WrongButton);
+
+        HatBtn.GetComponent<Button>().onClick.RemoveListener(WrongButton);
+
+        FlashLightBtn.GetComponent<Button>().onClick.RemoveListener(WrongButton);
+
+        LunchBoxBtn.GetComponent<Button>().onClick.RemoveListener(WrongButton);
+
+        MoustacheBtn.GetComponent<Button>().onClick.RemoveListener(RightButton);
+
+        GlassCutBtn.GetComponent<Button>().onClick.RemoveListener(WrongButton);
+    }
     void RightButton()
     {
-        rightGuesses += 1;
-        guesses += 1;
+        rightGuesses++;
+        guesses++;
     }
     void WrongButton()
     {
-        wrongGuess += 1;
-        guesses += 1;
+        wrongGuess++;
+        guesses++;
     }
     public void ChooseRight()
     {
@@ -204,9 +237,5 @@ public class PoliceNPC : MonoBehaviour
         LunchBoxBtn.GetComponent<Button>().interactable = true;
         MoustacheBtn.GetComponent<Button>().interactable = true;
         GlassCutBtn.GetComponent<Button>().interactable = true;
-    }
-    public void BasicDialogue()
-    {
-        TriggerDialogue(dialogue);
     }
 }

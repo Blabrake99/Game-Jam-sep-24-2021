@@ -274,7 +274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Gaurd 6
 --- !u!222 &24002294
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1048,7 +1048,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Gaurd 1
 --- !u!222 &165248608
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1441,7 +1441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -247, y: 247}
+  m_AnchoredPosition: {x: 229, y: 247}
   m_SizeDelta: {x: 400, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &268419437
@@ -2362,6 +2362,9 @@ MonoBehaviour:
   Question1Unlocked: 0
   Question2Unlocked: 0
   Question3Unlocked: 0
+  rightGuesses: 0
+  wrongGuess: 0
+  guesses: 0
 --- !u!23 &679005518
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2947,7 +2950,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Gaurd 2
 --- !u!222 &902737093
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3025,7 +3028,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Gaurd 8
 --- !u!222 &948755252
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3129,7 +3132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1038953281
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3859,7 +3862,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Gaurd 3
 --- !u!222 &1230250592
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4145,7 +4148,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Flash Light
 --- !u!222 &1359469805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4523,7 +4526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Gaurd 7
 --- !u!222 &1451467342
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6059,7 +6062,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Gaurd 5
 --- !u!222 &1911114435
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6390,7 +6393,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Gaurd 9
 --- !u!222 &1981436024
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6806,7 +6809,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Gaurd 4
 --- !u!222 &2064421165
 CanvasRenderer:
   m_ObjectHideFlags: 0
