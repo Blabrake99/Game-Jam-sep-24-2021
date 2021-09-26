@@ -24,6 +24,7 @@ public class MainCamera : MonoBehaviour
     [HideInInspector] public float timer;
 
     Pause pause;
+    public bool CanMoveCamera;
     private void Start()
     {
         pause = FindObjectOfType<Pause>();
@@ -75,7 +76,7 @@ public class MainCamera : MonoBehaviour
             QText.SetActive(false);
         }
 
-        if (!pause.isPaused)
+        if (!pause.isPaused && CanMoveCamera)
         {
             transform.position = Pivot.position + new Vector3(0, yOffset, 0);
 

@@ -57,6 +57,7 @@ public class Pause : MonoBehaviour
         else
         {
             player.GetComponent<PlayerMovement>().CantMove = false;
+            isPaused = false;
             Gm.lockCursor();
             pauseObject.SetActive(false);
         }

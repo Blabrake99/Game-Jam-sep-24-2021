@@ -28,8 +28,10 @@ public class GameManager : MonoBehaviour
     [SerializeField, Tooltip("The Image for this object in the inventory")]
     Sprite BloodItemSprite;
     bool hasBloodHintAlready;
+    MainCamera camera;
     private void Start()
     {
+        camera = FindObjectOfType<MainCamera>();
         lockCursor();
     }
 
@@ -117,6 +119,7 @@ public class GameManager : MonoBehaviour
         {
             t.InMenu = false;
         }
+        camera.CanMoveCamera = true;
         ButtonPage.SetActive(false);
         lockCursor();
     }
@@ -127,6 +130,10 @@ public class GameManager : MonoBehaviour
     public void LoadWinScene()
     {
         SceneManager.LoadScene("WinScene");
+    }
+    public void LoadMainMenuScene()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
     public void LoadLoseScene()
     {

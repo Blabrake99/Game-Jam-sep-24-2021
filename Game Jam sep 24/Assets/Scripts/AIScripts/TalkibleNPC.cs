@@ -41,11 +41,12 @@ public class TalkibleNPC : MonoBehaviour
     public bool Question1Unlocked,
         Question2Unlocked, Question3Unlocked;
     Animator anim;
-
+    MainCamera camera;
     [SerializeField] bool hasCut;
     private void Start()
     {
         anim = GetComponent<Animator>();
+        camera = FindObjectOfType<MainCamera>();
         ButtonPage.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
         manager = FindObjectOfType<DialogueManager>();
@@ -59,6 +60,7 @@ public class TalkibleNPC : MonoBehaviour
         {
             if (Input.GetButtonDown("Interact") && !talking && Timer <= 0)
             {
+                camera.CanMoveCamera = false;
                 InMenu = true;
                 Gm.unlockCursor();
                 setButtons();
@@ -73,6 +75,7 @@ public class TalkibleNPC : MonoBehaviour
             {
                 InMenu = false;
                 Gm.lockCursor();
+                camera.CanMoveCamera = true;
                 ButtonPage.SetActive(false);
                 Timer = .5f;
             }
@@ -81,6 +84,7 @@ public class TalkibleNPC : MonoBehaviour
             {
                 InMenu = false;
                 Gm.lockCursor();
+                camera.CanMoveCamera = true;
                 ButtonPage.SetActive(false);
                 EndDialogue();
             }
@@ -88,6 +92,7 @@ public class TalkibleNPC : MonoBehaviour
             {
                 InMenu = false;
                 Gm.lockCursor();
+                camera.CanMoveCamera = true;
                 ButtonPage.SetActive(false);
             }
             //return means enter
@@ -109,6 +114,7 @@ public class TalkibleNPC : MonoBehaviour
         StopAnimation();
         player.GetComponent<PlayerMovement>().CantMove = false;
         Gm.lockCursor();
+        camera.CanMoveCamera = true;
         ButtonPage.SetActive(false);
         talking = false;
     }
