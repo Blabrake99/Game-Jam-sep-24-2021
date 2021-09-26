@@ -526,7 +526,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50113704}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ab64d7f209c350f45aa188bba22eb551, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2205,7 +2205,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205047835}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ab64d7f209c350f45aa188bba22eb551, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -7273,43 +7273,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Jeffery
+    name: Alex
     sentences:
-    - Hello
-    - My nama Jeff
+    - Hm? Oh, I didn't hear you come by
+    - I was listening to music paradise remix 9
+    - I'm Alex
+    - I discovered the missing diamond first
   WatchDialogue:
-    name: Jeffery
+    name: Alex
     sentences:
-    - I don't own a watch
-    - I think that belong to one of my co-workers
+    - No watch here
+    - I keep time in my head with the music
+    - Sometimes I get it REALLY wrong....
   NameTagDialogue:
-    name: Jeffery
+    name: Alex
     sentences:
-    - My name tags on me right now
+    - My name tags is right here, see?
   ShoePrintDialogue:
-    name: Jeffery
+    name: Alex
     sentences:
-    - I have clean shoes
+    - Yeah I was jamming outiside earlier
+    - Looks like some mud got on my shoes..
   HatDialogue:
-    name: Jeffery
+    name: Alex
     sentences:
-    - I don't have a hat
+    - What? No I don't have a hat
+    - I do have these sick headphones though
+    - They're great for blocking out all the other noise
+    - Although I didn't actually hear the glass shattering because of them....
   FlashLightDialogue:
-    name: Jeffery
+    name: Alex
     sentences:
-    - My flash lights right here
+    - I don't have a flashlight
+    - But I think I saw one on the floor earlier
   LunchBoxDialogue:
-    name: Jeffery
+    name: Alex
     sentences:
-    - That looks stupid
+    - 'Yeah, Isaac''s lunchbox is weird.. '
+    - Why does he talk about it so much?
   MoustacheDialogue:
-    name: Jeffery
+    name: Alex
     sentences:
-    - I have a moustache
+    - Did you just ask if my moustache was fake?
   GlassCutDialogue:
-    name: Jeffery
+    name: Alex
     sentences:
-    - i'm not bleeding
+    - Yeah, I cut my hand while cleaning up the broken glass
   Talkdistance: 2
   talking: 0
   InMenu: 0
