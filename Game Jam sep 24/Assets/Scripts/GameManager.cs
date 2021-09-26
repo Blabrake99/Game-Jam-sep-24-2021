@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -17,7 +18,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject ButtonPage;
 
+    public bool StartWinning;
 
+    public bool StartLosing;
     private void Start()
     {
         lockCursor();
@@ -97,5 +100,12 @@ public class GameManager : MonoBehaviour
     {
         DialogueButtons[index].GetComponent<Button>().interactable = false;
     }
-
+    public void LoadWinScene()
+    {
+        SceneManager.LoadScene("WinScene");
+    }
+    public void LoadLoseScene()
+    {
+        SceneManager.LoadScene("LoseScene");
+    }
 }
