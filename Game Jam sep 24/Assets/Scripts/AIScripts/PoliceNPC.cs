@@ -76,6 +76,11 @@ public class PoliceNPC : MonoBehaviour
                     Gm.unlockCursor();
                     UnsetButtons();
                     setButtons();
+                    ChoosedRight = false;
+                    ChoosedWrong = false;
+                    rightGuesses = 0;
+                    wrongGuess = 0;
+                    guesses = 0;
                     ButtonPage.SetActive(false);
                     GuessPage.SetActive(true);
                     talking = false;
