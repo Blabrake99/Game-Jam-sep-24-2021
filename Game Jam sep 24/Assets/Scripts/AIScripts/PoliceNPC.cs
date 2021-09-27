@@ -242,7 +242,7 @@ public class PoliceNPC : MonoBehaviour
         ButtonPage.SetActive(true);
         GuessPage.SetActive(false);
     }
-    public void ChooseWrong()
+    public void ChooseWrong(string name)
     {
         ChoosedWrong = true;
         ButtonPage.SetActive(true);
