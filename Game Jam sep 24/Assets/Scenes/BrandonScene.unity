@@ -28983,6 +28983,11 @@ PrefabInstance:
       objectReference: {fileID: 1038953280}
     - target: {fileID: 4212183055783695576, guid: 0aa454f30e3b9ec44ab342b21aab2ef1,
         type: 3}
+      propertyPath: WhoDidItPage
+      value: 
+      objectReference: {fileID: 4453453}
+    - target: {fileID: 4212183055783695576, guid: 0aa454f30e3b9ec44ab342b21aab2ef1,
+        type: 3}
       propertyPath: BloodItemSprite
       value: 
       objectReference: {fileID: 21300000, guid: 5fbc82ca0fb4fcb4597f7e13ef79583f,

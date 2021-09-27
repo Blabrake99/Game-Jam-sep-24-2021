@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int InventorySpacesUsed = 0;
 
     [SerializeField] GameObject ButtonPage;
+    [SerializeField] GameObject WhoDidItPage;
 
     public bool StartWinning;
 
@@ -126,6 +127,7 @@ public class GameManager : MonoBehaviour
         police.UnsetButtons();
         camera.CanMoveCamera = true;
         ButtonPage.SetActive(false);
+        WhoDidItPage.SetActive(false);
         lockCursor();
     }
     public void DisableButton(int index)
