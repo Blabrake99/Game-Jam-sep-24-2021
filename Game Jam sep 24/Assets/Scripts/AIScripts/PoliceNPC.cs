@@ -194,11 +194,11 @@ public class PoliceNPC : MonoBehaviour
 
         NameTagBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
 
-        ShoePrintBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
+        ShoePrintBtn.GetComponent<Button>().onClick.AddListener(RightButton);
 
         HatBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
 
-        FlashLightBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
+        FlashLightBtn.GetComponent<Button>().onClick.AddListener(RightButton);
 
         LunchBoxBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
 
