@@ -29,7 +29,7 @@ public class BringToNextScene : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
 
-        if(scene.name == "LoseScreen")
+        if(scene.name == "LoseScene")
         {
             image = GameObject.FindGameObjectWithTag("LoseScreen").GetComponent<Image>();
 
