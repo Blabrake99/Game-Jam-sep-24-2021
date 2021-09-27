@@ -74,6 +74,7 @@ public class PoliceNPC : MonoBehaviour
                 if (Input.GetButtonDown("Interact") && !talking && Timer <= 0 && TalkedToOnce)
                 {
                     Gm.unlockCursor();
+                    UnsetButtons();
                     setButtons();
                     ButtonPage.SetActive(false);
                     GuessPage.SetActive(true);
@@ -162,7 +163,6 @@ public class PoliceNPC : MonoBehaviour
     public void TriggerDialogue(Dialogue log)
     {
         ButtonPage.SetActive(false);
-        UnsetButtons();
         talking = true;
         manager.StartDialogue(log);
         manager.NPC = this.gameObject;
