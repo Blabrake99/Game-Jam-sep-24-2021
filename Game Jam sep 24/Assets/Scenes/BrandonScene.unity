@@ -29011,7 +29011,7 @@ PrefabInstance:
         type: 3}
       propertyPath: InventorySlots.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1750323760}
     - target: {fileID: 4212183055783695576, guid: 0aa454f30e3b9ec44ab342b21aab2ef1,
         type: 3}
       propertyPath: InventorySlots.Array.data[3]
