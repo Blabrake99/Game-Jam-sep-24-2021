@@ -74,13 +74,8 @@ public class PoliceNPC : MonoBehaviour
                 if (Input.GetButtonDown("Interact") && !talking && Timer <= 0 && TalkedToOnce)
                 {
                     Gm.unlockCursor();
-                    UnsetButtons();
-                    setButtons();
-                    ChoosedRight = false;
-                    ChoosedWrong = false;
-                    rightGuesses = 0;
-                    wrongGuess = 0;
-                    guesses = 0;
+                    ResetOfficer();
+                    //setButtons();
                     ButtonPage.SetActive(false);
                     GuessPage.SetActive(true);
                     talking = false;
@@ -89,6 +84,8 @@ public class PoliceNPC : MonoBehaviour
                 if (Input.GetButtonDown("Interact") && ButtonPage.activeSelf && Timer <= 0)
                 {
                     Gm.lockCursor();
+                    UnsetButtons();
+                    ResetOfficer();
                     ButtonPage.SetActive(false);
                     GuessPage.SetActive(false);
                     talking = false;
@@ -99,6 +96,8 @@ public class PoliceNPC : MonoBehaviour
             if (Input.GetButtonDown("Pause") && talking)
             {
                 Gm.lockCursor();
+                UnsetButtons();
+                ResetOfficer();
                 ButtonPage.SetActive(false);
                 GuessPage.SetActive(false);
                 talking = false;
@@ -107,6 +106,8 @@ public class PoliceNPC : MonoBehaviour
             if (Input.GetButtonDown("Pause"))
             {
                 Gm.lockCursor();
+                UnsetButtons();
+                ResetOfficer();
                 ButtonPage.SetActive(false);
                 talking = false;
                 GuessPage.SetActive(false);
@@ -132,11 +133,7 @@ public class PoliceNPC : MonoBehaviour
                     GoToWinScene = true;
                 if (rightGuesses == 2 && ChoosedWrong)
                     GoToLoseScene = true;
-                ChoosedRight = false;
-                ChoosedWrong = false;
-                rightGuesses = 0;
-                wrongGuess = 0;
-                guesses = 0;
+                ResetOfficer();
             }
             //return means enter
             if (talking && Input.GetButtonDown("Interact") && Timer < 0)
@@ -151,9 +148,18 @@ public class PoliceNPC : MonoBehaviour
         }
         Timer -= Time.deltaTime;
     }
+    void ResetOfficer()
+    {
+        ChoosedRight = false;
+        ChoosedWrong = false;
+        rightGuesses = 0;
+        wrongGuess = 0;
+        guesses = 0;
+    }
     public void DoneTalking()
     {
         player.GetComponent<PlayerMovement>().CantMove = false;
+        UnsetButtons();
         StopAnimation();
         Gm.lockCursor();
         if (GoToWinScene)
@@ -195,6 +201,7 @@ public class PoliceNPC : MonoBehaviour
     {
         ResetButtons();
         //this ready's up all the buttons to start dialogue 
+        print("set");
         StartingButton.SetActive(false);
 
         WatchBtn.GetComponent<Button>().onClick.AddListener(RightButton);
@@ -214,18 +221,18 @@ public class PoliceNPC : MonoBehaviour
         GlassCutBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
 
     }
-    void UnsetButtons()
+    public void UnsetButtons()
     {
-
+        print("Unset");
         WatchBtn.GetComponent<Button>().onClick.RemoveListener(RightButton);
 
         NameTagBtn.GetComponent<Button>().onClick.RemoveListener(WrongButton);
 
-        ShoePrintBtn.GetComponent<Button>().onClick.RemoveListener(WrongButton);
+        ShoePrintBtn.GetComponent<Button>().onClick.RemoveListener(RightButton);
 
         HatBtn.GetComponent<Button>().onClick.RemoveListener(WrongButton);
 
-        FlashLightBtn.GetComponent<Button>().onClick.RemoveListener(WrongButton);
+        FlashLightBtn.GetComponent<Button>().onClick.RemoveListener(RightButton);
 
         LunchBoxBtn.GetComponent<Button>().onClick.RemoveListener(WrongButton);
 
@@ -246,12 +253,14 @@ public class PoliceNPC : MonoBehaviour
     public void ChooseRight()
     {
         ChoosedRight = true;
+        setButtons();
         ButtonPage.SetActive(true);
         GuessPage.SetActive(false);
     }
     public void ChooseWrong(string name)
     {
         nextScene.nameTXT = name;
+        setButtons();
         ChoosedWrong = true;
         ButtonPage.SetActive(true);
         GuessPage.SetActive(false);

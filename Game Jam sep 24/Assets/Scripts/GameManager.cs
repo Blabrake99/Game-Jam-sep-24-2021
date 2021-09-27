@@ -29,9 +29,11 @@ public class GameManager : MonoBehaviour
     Sprite BloodItemSprite;
     bool hasBloodHintAlready;
     MainCamera camera;
+    PoliceNPC police;
     private void Start()
     {
         camera = FindObjectOfType<MainCamera>();
+        police = FindObjectOfType<PoliceNPC>();
         lockCursor();
     }
 
@@ -121,6 +123,7 @@ public class GameManager : MonoBehaviour
         {
             t.InMenu = false;
         }
+        police.UnsetButtons();
         camera.CanMoveCamera = true;
         ButtonPage.SetActive(false);
         lockCursor();
