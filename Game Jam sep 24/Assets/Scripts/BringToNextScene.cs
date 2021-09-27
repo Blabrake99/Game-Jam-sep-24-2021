@@ -36,6 +36,15 @@ public class BringToNextScene : MonoBehaviour
             for (int i = 0; i < loseScreens.Length; i++)
                 if (loseScreens[i].name == nameTXT)
                     image.sprite = loseScreens[i];
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+        if(scene.name == "WinScene")
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }
