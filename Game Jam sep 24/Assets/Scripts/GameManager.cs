@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
         {
             InventorySlots[InventorySpacesUsed].GetComponent<InventorySlots>().ItemDescription = BloodDescription;
             InventorySlots[InventorySpacesUsed].GetComponent<Image>().sprite = BloodItemSprite;
+            InventorySlots[InventorySpacesUsed].GetComponent<Image>().color = new Color(255, 255, 255, 255);
             hasGlassCut = true;
             hasBloodHintAlready = true;
             InventorySpacesUsed += 1;
@@ -108,6 +109,7 @@ public class GameManager : MonoBehaviour
         {
             InventorySlots[InventorySpacesUsed].GetComponent<InventorySlots>().ItemDescription = InventoryParagraph;
             InventorySlots[InventorySpacesUsed].GetComponent<Image>().sprite = image;
+            InventorySlots[InventorySpacesUsed].GetComponent<Image>().color = new Color(255,255,255,255);
             InventorySpacesUsed += 1;
         }
     }

@@ -65,6 +65,8 @@ public class TalkibleNPC : MonoBehaviour
                 TriggerDialogue(dialogue);
                 Timer = .5f;
                 TalkedToOnce = true;
+                if (hasCut)
+                    Gm.UpdateBloodInventory();
             }
             if (Input.GetButtonDown("Interact") && !talking && !InMenu && Timer <= 0 && TalkedToOnce)
             {
@@ -73,10 +75,6 @@ public class TalkibleNPC : MonoBehaviour
                 Gm.unlockCursor();
                 setButtons();
                 ButtonPage.SetActive(true);
-
-                if(hasCut)
-                    Gm.UpdateBloodInventory();
-
                 Timer = .5f;
             }
             if (Input.GetButtonDown("Interact") && InMenu && !talking && Timer <= 0)

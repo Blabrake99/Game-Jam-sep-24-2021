@@ -43,19 +43,19 @@ public class MainCamera : MonoBehaviour
     {
         if (!Talking && timer <= 0)
         {
+            int layerMask = 1 << 8;
             ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
-            if (Physics.Raycast(ray, out HitInfo))
+            if (Physics.Raycast(ray, out HitInfo, 100, layerMask))
             {
+                
                 //this is here to let you know that there's a clue to pick up
-                if(HitInfo.collider.gameObject.tag == "PickUpables")
+                if (HitInfo.collider.gameObject.tag == "PickUpables")
                     QText.SetActive(true);
-                else
-                    QText.SetActive(false);
 
                 if (HitInfo.collider.gameObject.tag == "Interactable")
                     QText.SetActive(true);
-                else
-                    QText.SetActive(false);
+
+
 
                 if (HitInfo.collider.gameObject.tag == "PickUpables" && Input.GetButtonDown("Interact"))
                 {
@@ -68,6 +68,16 @@ public class MainCamera : MonoBehaviour
                     HitInfo.collider.gameObject.GetComponent<Interactables>().TriggerDialogue();
                     Talking = true;
                 }
+
+                if (HitInfo.collider.gameObject.tag != "Interactable" &&
+                    HitInfo.collider.gameObject.tag != "PickUpables")
+                {
+                    QText.SetActive(false);
+                }
+            }
+            else
+            {
+                QText.SetActive(false);
             }
         }
         else

@@ -61,7 +61,7 @@ public class PoliceNPC : MonoBehaviour
         if (Vector3.Distance(transform.position, player.transform.position) < Talkdistance)
         {
             if(!TalkedToOnce && Input.GetButtonDown("Interact") && !talking && Timer <= 0 ||
-                Input.GetButtonDown("Interact") && !talking && Timer <= 0 && Gm.InventorySpacesUsed >= 3)
+                Input.GetButtonDown("Interact") && !talking && Timer <= 0 && Gm.InventorySpacesUsed < 3)
             {
                 TriggerDialogue(dialogue);
                 Timer = .5f;
@@ -194,11 +194,11 @@ public class PoliceNPC : MonoBehaviour
 
         NameTagBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
 
-        ShoePrintBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
+        ShoePrintBtn.GetComponent<Button>().onClick.AddListener(RightButton);
 
         HatBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
 
-        FlashLightBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
+        FlashLightBtn.GetComponent<Button>().onClick.AddListener(RightButton);
 
         LunchBoxBtn.GetComponent<Button>().onClick.AddListener(WrongButton);
 
