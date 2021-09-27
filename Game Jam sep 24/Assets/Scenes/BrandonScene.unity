@@ -3296,32 +3296,32 @@ PrefabInstance:
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[1]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[2]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[3]
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[5]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[6]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[7]
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
@@ -5026,7 +5026,7 @@ MonoBehaviour:
   LunchBoxBtn: {fileID: 863963127}
   MoustacheBtn: {fileID: 1497991668}
   GlassCutBtn: {fileID: 81116728}
-  talkingTypes: 000000000100000002000000030000000000000001000000020000000300000000000000
+  talkingTypes: 000000000000000003000000000000000300000000000000000000000000000002000000
   Question1Unlocked: 0
   Question2Unlocked: 0
   Question3Unlocked: 0
@@ -6525,7 +6525,7 @@ MonoBehaviour:
   LunchBoxBtn: {fileID: 863963127}
   MoustacheBtn: {fileID: 1497991668}
   GlassCutBtn: {fileID: 81116728}
-  talkingTypes: 000000000100000002000000030000000000000001000000020000000300000000000000
+  talkingTypes: 000000000000000000000000000000000000000000000000000000000300000000000000
   Question1Unlocked: 0
   Question2Unlocked: 0
   Question3Unlocked: 0
@@ -7854,7 +7854,7 @@ MonoBehaviour:
   LunchBoxBtn: {fileID: 863963127}
   MoustacheBtn: {fileID: 1497991668}
   GlassCutBtn: {fileID: 81116728}
-  talkingTypes: 000000000100000002000000030000000000000001000000020000000300000000000000
+  talkingTypes: 000000000000000000000000000000000000000000000000000000000100000000000000
   Question1Unlocked: 0
   Question2Unlocked: 0
   Question3Unlocked: 0
@@ -8058,7 +8058,7 @@ MonoBehaviour:
   LunchBoxBtn: {fileID: 863963127}
   MoustacheBtn: {fileID: 1497991668}
   GlassCutBtn: {fileID: 81116728}
-  talkingTypes: 000000000100000002000000030000000000000001000000020000000300000000000000
+  talkingTypes: 000000000000000000000000000000000000000000000000030000000000000000000000
   Question1Unlocked: 0
   Question2Unlocked: 0
   Question3Unlocked: 0
@@ -10732,7 +10732,7 @@ MonoBehaviour:
   LunchBoxBtn: {fileID: 863963127}
   MoustacheBtn: {fileID: 1497991668}
   GlassCutBtn: {fileID: 81116728}
-  talkingTypes: 000000000100000002000000030000000000000001000000020000000300000000000000
+  talkingTypes: 000000000200000000000000000000000000000002000000030000000300000002000000
   Question1Unlocked: 0
   Question2Unlocked: 0
   Question3Unlocked: 0
@@ -15920,7 +15920,7 @@ MonoBehaviour:
   LunchBoxBtn: {fileID: 863963127}
   MoustacheBtn: {fileID: 1497991668}
   GlassCutBtn: {fileID: 81116728}
-  talkingTypes: 000000000100000002000000030000000000000001000000020000000300000000000000
+  talkingTypes: 000000000000000003000000000000000000000000000000030000000300000000000000
   Question1Unlocked: 0
   Question2Unlocked: 0
   Question3Unlocked: 0
@@ -17343,32 +17343,32 @@ PrefabInstance:
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[1]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[2]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[3]
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[5]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[6]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[7]
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
@@ -20345,7 +20345,7 @@ MonoBehaviour:
     sentences:
     - Dirty foot steps coming from outside
   Description: Dirty foot steps coming from outside
-  ItemSprite: {fileID: 0}
+  ItemSprite: {fileID: 21300000, guid: 9ab1e325d418add45a94adf6c0e25c73, type: 3}
   itemGiven: 2
 --- !u!1 &1989678909
 GameObject:
@@ -22401,27 +22401,27 @@ PrefabInstance:
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[1]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[2]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[3]
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[5]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[6]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
