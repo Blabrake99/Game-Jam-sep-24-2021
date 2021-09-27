@@ -3221,9 +3221,54 @@ PrefabInstance:
       objectReference: {fileID: 1572877496}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
+      propertyPath: dialogue.name
+      value: Brandon
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
       propertyPath: StartingButton
       value: 
       objectReference: {fileID: 651826161}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.name
+      value: Brandon
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.name
+      value: Brandon
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: NameTagDialogue.name
+      value: Brandon
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.name
+      value: Brandon
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: LunchBoxDialogue.name
+      value: Brandon
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.name
+      value: Brandon
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: ShoePrintDialogue.name
+      value: Brandon
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: FlashLightDialogue.name
+      value: Brandon
+      objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[1]
@@ -3253,6 +3298,101 @@ PrefabInstance:
         type: 3}
       propertyPath: talkingTypes.Array.data[7]
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Name's Brandon
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: I took my break from about 8:30 to 8:36
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: On the way back I saw Harold around the diamond room
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.sentences.Array.data[0]
+      value: Yeah I've got my hat
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.sentences.Array.data[1]
+      value: I wish it was a bit bigger though
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: ShoePrintDialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: NameTagDialogue.sentences.Array.data[0]
+      value: My name tag is right here, see?
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.sentences.Array.data[0]
+      value: No cuts here
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.sentences.Array.data[1]
+      value: Be careful in the diamond room though, you could hurt yourself
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: LunchBoxDialogue.sentences.Array.data[0]
+      value: God I wish Isaac would talk about ANYTHING else other than his lunchbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.sentences.Array.data[0]
+      value: Why are you asking me about a moustache?
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.sentences.Array.data[1]
+      value: You can clearly see I don't have one
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: ShoePrintDialogue.sentences.Array.data[0]
+      value: I went outside for my break at 8:30 for a smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: ShoePrintDialogue.sentences.Array.data[1]
+      value: That's why my shoes are muddy
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: FlashLightDialogue.sentences.Array.data[0]
+      value: I have my flashlight right here
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40a175e4fd174624aa09d21714e93d99, type: 3}
@@ -4671,43 +4811,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Jeffery
+    name: Geoff
     sentences:
-    - Hello
-    - My nama Jeff
+    - IT WASN'T ME!
+    - O-oh hi detective...
+    - I'm Geoff
+    - I don't know anything about the diamond! I was in the bathroom at the time!
   WatchDialogue:
-    name: Jeffery
+    name: Geoff
     sentences:
-    - I don't own a watch
-    - I think that belong to one of my co-workers
+    - I-I don't have a watch.....
   NameTagDialogue:
-    name: Jeffery
+    name: Geoff
     sentences:
-    - My name tags on me right now
+    - M-my nametag is right here see?
   ShoePrintDialogue:
-    name: Jeffery
+    name: Geoff
     sentences:
-    - I have clean shoes
+    - Oh my shoes?
+    - I-I always keep them squeaky clean
   HatDialogue:
-    name: Jeffery
+    name: Geoff
     sentences:
-    - I don't have a hat
+    - I just got my hat
+    - It's a bit small though....
+    - DON'T TELL ANYONE THOUGH!
   FlashLightDialogue:
-    name: Jeffery
+    name: Geoff
     sentences:
-    - My flash lights right here
+    - O-oh... yeah I have my flashlight right here
   LunchBoxDialogue:
-    name: Jeffery
+    name: Geoff
     sentences:
-    - That looks stupid
+    - W-what is this..?
   MoustacheDialogue:
-    name: Jeffery
+    name: Geoff
     sentences:
-    - I have a moustache
+    - My moustache isn't fake
+    - B-but I think I saw Fred trying one on the other day....
   GlassCutDialogue:
-    name: Jeffery
+    name: Geoff
     sentences:
-    - i'm not bleeding
+    - MY HAND IS FINE
+    - Oh...
+    - I u-um I cut it a couple of days ago...
   Talkdistance: 2
   talking: 0
   InMenu: 0
@@ -6066,43 +6213,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Jeffery
+    name: Cam
     sentences:
-    - Hello
-    - My nama Jeff
+    - Hi, I'm new
+    - My name is Cam
+    - I saw Daniel eating alone in the breakroom earlier
   WatchDialogue:
-    name: Jeffery
+    name: Cam
     sentences:
-    - I don't own a watch
-    - I think that belong to one of my co-workers
+    - My watch is right here
+    - It's just after 9:00
+    - All the clocks in here are busted, I wouldn't trust em
   NameTagDialogue:
-    name: Jeffery
+    name: Cam
     sentences:
-    - My name tags on me right now
+    - My nametag is on me right now
   ShoePrintDialogue:
-    name: Jeffery
+    name: Cam
     sentences:
     - I have clean shoes
   HatDialogue:
-    name: Jeffery
+    name: Cam
     sentences:
-    - I don't have a hat
+    - They give you your hat after over a year here. I don't have one yet
   FlashLightDialogue:
     name: Jeffery
     sentences:
-    - My flash lights right here
+    - I'm not high up enough to have a flashlight
   LunchBoxDialogue:
-    name: Jeffery
+    name: Cam
     sentences:
-    - That looks stupid
+    - Isaac is a cool guy and everything but I wish he would stop with the lunchbox
+      nonsense
   MoustacheDialogue:
-    name: Jeffery
+    name: Cam
     sentences:
-    - I have a moustache
+    - 'Moustache? '
+    - Obviously I don't have one of those
   GlassCutDialogue:
-    name: Jeffery
+    name: Cam
     sentences:
-    - i'm not bleeding
+    - I fell and scraped my knee earlier
   Talkdistance: 2
   talking: 0
   InMenu: 0
@@ -7282,13 +7433,13 @@ MonoBehaviour:
   WatchDialogue:
     name: Alex
     sentences:
-    - No watch here
+    - That's not my watch
     - I keep time in my head with the music
     - Sometimes I get it REALLY wrong....
   NameTagDialogue:
     name: Alex
     sentences:
-    - My name tags is right here, see?
+    - My name tag is right here, see?
   ShoePrintDialogue:
     name: Alex
     sentences:
@@ -7466,43 +7617,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Jeffery
+    name: Isaac
     sentences:
-    - Hello
-    - My nama Jeff
+    - Hey there!
+    - I'm Isaac
+    - My buddy Daniel and I had a great conversation right around the time the diamond
+      was stolen
+    - Have you seen my SUPER cool lunchbox?
+    - It's based on magic super pony!
   WatchDialogue:
-    name: Jeffery
+    name: Isaac
     sentences:
-    - I don't own a watch
-    - I think that belong to one of my co-workers
+    - I left my watch in my lunchbox
+    - I leave everything in my lunchbox!
+    - Including lunch!
   NameTagDialogue:
-    name: Jeffery
+    name: Isaac
     sentences:
-    - My name tags on me right now
+    - My nametag is on me right now
+    - Most people spell my name wrong
+    - It's two A's  not to S's!
   ShoePrintDialogue:
-    name: Jeffery
+    name: Isaac
     sentences:
-    - I have clean shoes
+    - My shoes are clean as a whistle!
+    - I have a shoe polish kit in my lunchbox if you wanna try it out
   HatDialogue:
-    name: Jeffery
+    name: Isaac
     sentences:
-    - I don't have a hat
+    - I don't have a hat yet
+    - But if I did, you can guess where it would go
+    - That's right!
+    - On my head!
+    - What did you think I was gonna say?
   FlashLightDialogue:
-    name: Jeffery
+    name: Isaac
     sentences:
-    - My flash lights right here
+    - I don't have a flashlight
+    - Not enough room in the lunchbox for that...
   LunchBoxDialogue:
-    name: Jeffery
+    name: Isaac
     sentences:
-    - That looks stupid
+    - THAT'S IT
+    - MY LUNCHBOX
+    - THANK YOU SO MUCH FOR FINDING IT
+    - So...
+    - You wanna hear about Super Magic Pony?
   MoustacheDialogue:
-    name: Jeffery
+    name: Isacc
     sentences:
-    - I have a moustache
+    - I shave pretty regularly
+    - I have a shaving kit in my lunchbox!
+    - Someone could even collect the hair and make their own moustache out of it!
   GlassCutDialogue:
-    name: Jeffery
+    name: Isaac
     sentences:
-    - i'm not bleeding
+    - I actually cut myself shaving recently
+    - Using the shaving kit I keep in the lunchbox!
   Talkdistance: 2
   talking: 0
   InMenu: 0
@@ -9431,43 +9602,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Jeffery
+    name: Fred
     sentences:
-    - Hello
-    - My nama Jeff
+    - Good evening Detective
+    - My name is Fred
+    - I was on break with Daniel around the time of theft
+    - So if you could leave me alone, I'd appreciate it
+    - Unlike some of these simpletons, I take pride in my work
   WatchDialogue:
-    name: Jeffery
+    name: Fred
     sentences:
-    - I don't own a watch
-    - I think that belong to one of my co-workers
+    - T-that's my watch..
+    - Where did you find that, give it here!
+    - 8:32, that's when I...
+    - Nothing!
+    - Y-you must've broken it!
   NameTagDialogue:
-    name: Jeffery
+    name: Fred
     sentences:
-    - My name tags on me right now
+    - Of course my name tag is here
+    - Where else would it be?
   ShoePrintDialogue:
-    name: Jeffery
+    name: Fred
     sentences:
-    - I have clean shoes
+    - The state of my shoes is of no concern to the likes of you
+    - Though I suppose if you MUST know, I was outside earlier yes
   HatDialogue:
-    name: Jeffery
+    name: Fred
     sentences:
     - I don't have a hat
   FlashLightDialogue:
-    name: Jeffery
+    name: Fred
     sentences:
-    - My flash lights right here
+    - You found my flashlight?
+    - Perhaps it's YOU who is the thief since you have so many items
+    - And you've stained it too!
   LunchBoxDialogue:
-    name: Jeffery
+    name: Fred
     sentences:
-    - That looks stupid
+    - Get that *thing* out of my face
+    - It repulses me just looking at it
   MoustacheDialogue:
-    name: Jeffery
+    name: Fred
     sentences:
-    - I have a moustache
+    - A fake?
+    - I don't know anything about that
   GlassCutDialogue:
-    name: Jeffery
+    name: Fred
     sentences:
-    - i'm not bleeding
+    - I cut myself yesterday if you must know
+    - It's bandaged now though, so leave it alone!
   Talkdistance: 2
   talking: 0
   InMenu: 0
@@ -14098,7 +14282,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh61662
+  m_Name: pb_Mesh37748
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14358,43 +14542,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Jeffery
+    name: Daniel
     sentences:
-    - Hello
-    - My nama Jeff
+    - How's it going, I'm Dan
+    - I was in the break room with Fred at around 8:30
+    - He took a little longer to get there than I did though..
+    - Must've been in the bathroom or something....
   WatchDialogue:
-    name: Jeffery
+    name: Daniel
     sentences:
-    - I don't own a watch
-    - I think that belong to one of my co-workers
+    - That watch looks stuck
+    - It's just after 9:00
   NameTagDialogue:
-    name: Jeffery
+    name: Daniel
     sentences:
-    - My name tags on me right now
+    - That's my nametag!
+    - Where did you find it?
   ShoePrintDialogue:
-    name: Jeffery
+    name: Daniel
     sentences:
-    - I have clean shoes
+    - We should really hire a janitor...
   HatDialogue:
-    name: Jeffery
+    name: Daniel
     sentences:
-    - I don't have a hat
+    - Not my hat
+    - I wonder how small the boss thinks our head are...
   FlashLightDialogue:
-    name: Jeffery
+    name: Daniel
     sentences:
-    - My flash lights right here
+    - Is that your flashlight?
+    - Something seems off about it...
   LunchBoxDialogue:
-    name: Jeffery
+    name: Daniel
     sentences:
-    - That looks stupid
+    - What is that thing?
   MoustacheDialogue:
-    name: Jeffery
+    name: Daniel
     sentences:
-    - I have a moustache
+    - Is that a fake moustache?
+    - Has someone been lying this whole time?
   GlassCutDialogue:
-    name: Jeffery
+    name: Daniel
     sentences:
-    - i'm not bleeding
+    - I'm not bleeding
   Talkdistance: 2
   talking: 0
   InMenu: 0
@@ -15469,9 +15659,54 @@ PrefabInstance:
       objectReference: {fileID: 1572877496}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
+      propertyPath: dialogue.name
+      value: Harold
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
       propertyPath: StartingButton
       value: 
       objectReference: {fileID: 651826161}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.name
+      value: Harold
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.name
+      value: Harold
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: NameTagDialogue.name
+      value: Harold
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.name
+      value: Harold
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: LunchBoxDialogue.name
+      value: Harold
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.name
+      value: Harold
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: ShoePrintDialogue.name
+      value: Harold
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: FlashLightDialogue.name
+      value: Harold
+      objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[1]
@@ -15501,6 +15736,112 @@ PrefabInstance:
         type: 3}
       propertyPath: talkingTypes.Array.data[7]
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Hi there
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: My name is Harold
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: You're looking for the diamond thief?
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: I saw Geoff coming out of the diamond room at 8:35 looking more skittish
+        than usual
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: Sooooooo
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: It was probably him
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.sentences.Array.data[0]
+      value: I'm close to getting my hat, just one more week
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.sentences.Array.data[1]
+      value: Without an incident that is.....
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.sentences.Array.data[0]
+      value: That watch isn't mine
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.sentences.Array.data[1]
+      value: Maybe it's Geoff's
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.sentences.Array.data[2]
+      value: He's always freaking out about SOMETHING
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.sentences.Array.data[0]
+      value: Blood?
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.sentences.Array.data[1]
+      value: Nope, nothing like that here
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.sentences.Array.data[0]
+      value: My flashlight is right here
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.sentences.Array.data[1]
+      value: I think I saw Geoff playing with his earlier
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: ShoePrintDialogue.sentences.Array.data[0]
+      value: Got my nametag right here
       objectReference: {fileID: 0}
     - target: {fileID: 1794268209302568397, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
@@ -20070,9 +20411,54 @@ PrefabInstance:
       objectReference: {fileID: 1572877496}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
+      propertyPath: dialogue.name
+      value: Edward
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
       propertyPath: StartingButton
       value: 
       objectReference: {fileID: 651826161}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.name
+      value: Edward
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.name
+      value: Edward
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: NameTagDialogue.name
+      value: Edward
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.name
+      value: Edward
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: LunchBoxDialogue.name
+      value: Edward
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.name
+      value: Edward
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: ShoePrintDialogue.name
+      value: Edward
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: FlashLightDialogue.name
+      value: Edward
+      objectReference: {fileID: 0}
     - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
       propertyPath: talkingTypes.Array.data[1]
@@ -20102,6 +20488,157 @@ PrefabInstance:
         type: 3}
       propertyPath: talkingTypes.Array.data[7]
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: How's it going
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: I'm Edward
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: I had the unfortunate task of keeping Isaac company...
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: I think he went into the other room
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.sentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.sentences.Array.data[0]
+      value: That isn't my hat
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.sentences.Array.data[1]
+      value: I never leave it just laying around
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: HatDialogue.sentences.Array.data[2]
+      value: ....because it's stuck on my head
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.sentences.Array.data[0]
+      value: Oh your watch is broken?
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.sentences.Array.data[1]
+      value: 8:32 huh.. that's right around when the diamond was stolen
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.sentences.Array.data[2]
+      value: Well mine works just fine, it's just after 9:00
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: WatchDialogue.sentences.Array.data[3]
+      value: Well mine works just fine, it's just after 9:00
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: ShoePrintDialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: FlashLightDialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: NameTagDialogue.sentences.Array.data[0]
+      value: My nametag is on me right now see?
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.sentences.Array.data[0]
+      value: The only injury I have is my headache after talking with Isaac for too
+        long
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: GlassCutDialogue.sentences.Array.data[1]
+      value: Seriously, what is it with him and his lunchbox?
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: LunchBoxDialogue.sentences.Array.data[0]
+      value: Oh, Isaac told me ALL about his lunchbox while we were together
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.sentences.Array.data[0]
+      value: Does one of us have a fake moustache?
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.sentences.Array.data[1]
+      value: I bet it's Alex
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: MoustacheDialogue.sentences.Array.data[2]
+      value: He never pays attention anyway
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: ShoePrintDialogue.sentences.Array.data[0]
+      value: This mud is dry on my boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: ShoePrintDialogue.sentences.Array.data[1]
+      value: I just haven't cleaned them in a while...
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: FlashLightDialogue.sentences.Array.data[0]
+      value: That flashlight looks a little weird
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: FlashLightDialogue.sentences.Array.data[1]
+      value: Is there..
+      objectReference: {fileID: 0}
+    - target: {fileID: 726588401977436630, guid: 40a175e4fd174624aa09d21714e93d99,
+        type: 3}
+      propertyPath: FlashLightDialogue.sentences.Array.data[2]
+      value: A BLOODSTAIN ON IT?
       objectReference: {fileID: 0}
     - target: {fileID: 1794268209302568397, guid: 40a175e4fd174624aa09d21714e93d99,
         type: 3}
