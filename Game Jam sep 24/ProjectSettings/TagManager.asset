@@ -8,6 +8,7 @@ TagManager:
   - PickUpables
   - Pause_Menu
   - Interactable
+  - LoseScreen
   layers:
   - Default
   - TransparentFX

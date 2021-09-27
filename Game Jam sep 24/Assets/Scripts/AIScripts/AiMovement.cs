@@ -34,7 +34,8 @@ public class AiMovement : MonoBehaviour
             waitTime = 0;
         }
 
-        if (agent.remainingDistance <= 1f && waitTime <= 0 && !gameObject.GetComponent<TalkibleNPC>().InMenu)
+        if (agent.remainingDistance <= 1f && waitTime <= 0 && !gameObject.GetComponent<TalkibleNPC>().InMenu 
+            && !gameObject.GetComponent<TalkibleNPC>().talking)
         {
             waitTime = 5f;
             ChangeWaypoint();

@@ -46,9 +46,11 @@ public class PoliceNPC : MonoBehaviour
     bool GoToWinScene;
 
     Animator anim;
+    BringToNextScene nextScene;
     private void Start()
     {
         anim = GetComponent<Animator>();
+        nextScene = FindObjectOfType<BringToNextScene>();
         ButtonPage.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
         manager = FindObjectOfType<DialogueManager>();
