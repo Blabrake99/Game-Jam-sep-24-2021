@@ -41,7 +41,10 @@ public class AiMovement : MonoBehaviour
             ChangeWaypoint();
             ChangeDestination();
         }
-
+        if(gameObject.GetComponent<TalkibleNPC>().InMenu || gameObject.GetComponent<TalkibleNPC>().talking)
+        {
+            agent.SetDestination(transform.position);
+        }
         if (gameObject.GetComponent<TalkibleNPC>().talking || agent.remainingDistance <= .2f)
             anim.SetBool("IsWalking", false);
         if(agent.remainingDistance > .2f)
