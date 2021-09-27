@@ -2446,6 +2446,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: dce3b0656ab634648bcbd145dcffa0ec, type: 2}
+    - target: {fileID: 7750397243111347764, guid: d66e44e6f5f852641874c6bae8cb916f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: d66e44e6f5f852641874c6bae8cb916f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d66e44e6f5f852641874c6bae8cb916f, type: 3}
 --- !u!4 &209734065 stripped
@@ -3111,10 +3121,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 48522150262119205, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 48522150262119205, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 431f675dbcdc0834398cdd081441be94,
         type: 3}
       propertyPath: m_Name
       value: chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 431f675dbcdc0834398cdd081441be94, type: 3}
@@ -9146,6 +9171,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: dce3b0656ab634648bcbd145dcffa0ec, type: 2}
+    - target: {fileID: 7750397243111347764, guid: d66e44e6f5f852641874c6bae8cb916f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: d66e44e6f5f852641874c6bae8cb916f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d66e44e6f5f852641874c6bae8cb916f, type: 3}
 --- !u!4 &702786291 stripped
@@ -11191,10 +11226,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 48522150262119205, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 48522150262119205, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 431f675dbcdc0834398cdd081441be94,
         type: 3}
       propertyPath: m_Name
       value: chair (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 431f675dbcdc0834398cdd081441be94, type: 3}
@@ -13134,6 +13184,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2698896085296522817, guid: 8cbd0ef78f111654ea9534cf4f645146,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2698896085296522817, guid: 8cbd0ef78f111654ea9534cf4f645146,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8cbd0ef78f111654ea9534cf4f645146,
         type: 3}
@@ -17153,6 +17213,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: dce3b0656ab634648bcbd145dcffa0ec, type: 2}
+    - target: {fileID: 7750397243111347764, guid: d66e44e6f5f852641874c6bae8cb916f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: d66e44e6f5f852641874c6bae8cb916f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d66e44e6f5f852641874c6bae8cb916f, type: 3}
 --- !u!4 &1366746857 stripped
@@ -18503,10 +18573,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 48522150262119205, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 48522150262119205, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 431f675dbcdc0834398cdd081441be94,
         type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 431f675dbcdc0834398cdd081441be94, type: 3}
@@ -19583,10 +19668,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 48522150262119205, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 48522150262119205, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 431f675dbcdc0834398cdd081441be94,
         type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 431f675dbcdc0834398cdd081441be94,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 431f675dbcdc0834398cdd081441be94, type: 3}
@@ -23762,6 +23862,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: dce3b0656ab634648bcbd145dcffa0ec, type: 2}
+    - target: {fileID: 7750397243111347764, guid: d66e44e6f5f852641874c6bae8cb916f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: d66e44e6f5f852641874c6bae8cb916f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d66e44e6f5f852641874c6bae8cb916f, type: 3}
 --- !u!4 &1849201842 stripped
@@ -24586,6 +24696,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2698896085296522817, guid: 8cbd0ef78f111654ea9534cf4f645146,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2698896085296522817, guid: 8cbd0ef78f111654ea9534cf4f645146,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8cbd0ef78f111654ea9534cf4f645146,
         type: 3}
