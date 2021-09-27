@@ -61,7 +61,7 @@ public class PoliceNPC : MonoBehaviour
         if (Vector3.Distance(transform.position, player.transform.position) < Talkdistance)
         {
             if(!TalkedToOnce && Input.GetButtonDown("Interact") && !talking && Timer <= 0 ||
-                Input.GetButtonDown("Interact") && !talking && Timer <= 0 && Gm.InventorySpacesUsed >= 3)
+                Input.GetButtonDown("Interact") && !talking && Timer <= 0 && Gm.InventorySpacesUsed < 3)
             {
                 TriggerDialogue(dialogue);
                 Timer = .5f;
